@@ -1,0 +1,60 @@
+button {
+    background: #e3d670;
+    color: black;
+    width: 70px;
+    height: 30px;
+    border: 1px solid #C2AFA1;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:before {
+    display: block;
+    background: green;
+    width: 70px;
+    height: 100%;
+    left: 0;
+    right: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+button::after {
+    content: '';
+    color: white;
+    display: block;
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    filter: blur(30px);
+    transform: translate(-100px) scaleX(-15deg);
+}
+
+button:hover {
+    color: white;
+    background: #C2AFA1;
+    cursor: pointer;
+}
+
+button:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+
+}
+
+button:hover:after {
+    color: white;
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .1;
+    transition: .7s;
+
+}
